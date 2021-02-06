@@ -1,0 +1,5 @@
+<idea-plugin version="2">
+    <extensions defaultExtensionNs="NodeJS">
+        <runConfigurationExtension implementation="com.jetbrains.nodejs.remote.NodeJSRemoteRunConfigurationExtension"/>
+    </extensions>
+</idea-plugin>

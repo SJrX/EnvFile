@@ -1,0 +1,17 @@
+plugins {
+    id "java"
+    id "org.jetbrains.intellij"
+}
+
+intellij {
+    version jetbrains.version
+    type "IU"
+    plugins "NodeJS:183.4284.122", "JavaScriptLanguage", "JavaScriptDebugger"
+    //plugins "NodeJS:203.5981.152", "JavaScriptLanguage", "JavaScriptDebugger"
+    //plugins "NodeJS:202.6397.8", "JavaScriptLanguage", "JavaScriptDebugger"
+}
+
+dependencies {
+    compile project(":envfile-platform")
+    compile "org.jetbrains:annotations:16.0.3"
+}
