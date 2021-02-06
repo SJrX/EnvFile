@@ -5,6 +5,7 @@ include (
         'modules/platform',
         'modules/products/idea',
         'modules/products/goland',
+        'modules/products/nodejs',
         'modules/products/pycharm',
         'modules/products/rubymine',
 )

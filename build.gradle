@@ -24,7 +24,10 @@ allprojects {
             version : "2018.3",
             pycharm : "PythonCore:2018.3.183.4284.148",
             rubymine: "org.jetbrains.plugins.ruby:2018.3.20181121",
-            goland  : "org.jetbrains.plugins.go:183.4284.36.1532"
+
+            goland  : "org.jetbrains.plugins.go:183.4284.36.1532",
+            //goland  : "org.jetbrains.plugins.go:202.6397.20",
+            nodejs  : "NodeJS"
     ]
 }
 
@@ -33,13 +36,20 @@ intellij {
     pluginName "EnvFile"
     sameSinceUntilBuild false
     updateSinceUntilBuild false
+    // TODO figure out why it needs to be here
+    type "IU"
+    plugins "NodeJS:183.4284.122", "JavaScriptLanguage", "JavaScriptDebugger"
+    //plugins "NodeJS:203.5981.152", "JavaScriptLanguage", "JavaScriptDebugger"
+    //plugins "NodeJS:202.6397.8", "JavaScriptLanguage", "JavaScriptDebugger"
 }
+
 
 dependencies {
     compile project(":envfile-products-idea")
     compile project(":envfile-products-pycharm")
     compile project(":envfile-products-rubymine")
     compile project(":envfile-products-goland")
+    compile project(":envfile-products-nodejs")
 }
 
 wrapper {
